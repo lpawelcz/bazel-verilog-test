@@ -1,5 +1,7 @@
 # bazel-verilog-test
 
+![build](https://github.com/filmil/bazel-verilog-test/actions/workflows/build.yml/badge.svg)
+
 Testing verilog build rules from https://github.com/hdl/bazel_rules_hdl
 
 This is the answer to the question posed at:
