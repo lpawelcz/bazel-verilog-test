@@ -111,5 +111,7 @@ errors.
 
 ### Troubleshooting
 
-I intend to keep this repository in working order.
+I intend to keep this repository in working order. If something does not work,
+[file a bug][fb].
 
+[fb]: https://github.com/filmil/bazel-verilog-test/issues
