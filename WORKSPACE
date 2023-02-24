@@ -2,17 +2,12 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 
-rules_hdl_git_hash = "ebaf7482c035208f485f463c62fd3c2f969a9b5c"
-rules_hdl_git_sha256 = "3743f1ed6739abaaa68e1e907adffb13c285fd70390d950c3989729439d952c5"
 
 maybe(
-    http_archive,
+    git_repository,
     name = "rules_hdl",
-    sha256 = rules_hdl_git_sha256,
-    strip_prefix = "bazel_rules_hdl-%s" % rules_hdl_git_hash,
-    urls = [
-        "https://github.com/hdl/bazel_rules_hdl/archive/%s.tar.gz" % rules_hdl_git_hash,
-    ],
+    remote = "https://github.com/hdl/bazel_rules_hdl",
+    commit = "6689294f2d4f45de02a527d947b4703b4c008b53",
 )
 
 load("@rules_hdl//toolchains/cpython:cpython_toolchain.bzl", "register_cpython_repository")
