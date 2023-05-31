@@ -3,11 +3,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 
 
-maybe(
-    git_repository,
+local_repository(
     name = "rules_hdl",
-    remote = "https://github.com/hdl/bazel_rules_hdl",
-    commit = "6689294f2d4f45de02a527d947b4703b4c008b53",
+    path = "/data/work/google-xls/bazel_rules_hdl_playground/bazel_rules_hdl",
 )
 
 load("@rules_hdl//toolchains/cpython:cpython_toolchain.bzl", "register_cpython_repository")
