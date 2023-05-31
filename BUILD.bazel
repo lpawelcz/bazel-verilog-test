@@ -1,6 +1,16 @@
 load("@rules_hdl//synthesis:build_defs.bzl", "synthesize_rtl")
 load("@rules_hdl//place_and_route:build_defs.bzl", "place_and_route")
+load("@rules_hdl//place_and_route:build_defs.bzl", "asic_flow_finish")
 load("@rules_hdl//verilog:providers.bzl", "verilog_library")
+
+asic_flow_finish(
+	name = "counter_asic_flow_finish",
+	implemented_rtl = ":counter_place_and_route",
+	klayout_lyt = "klayout.lyt",
+	klayout_lef = "klayout_tech.lef",
+	platform_gds = "sky130_fd_sc_hd.gds",
+	fill_config = "fill.json",
+)
 
 place_and_route(
     name = "counter_place_and_route",
