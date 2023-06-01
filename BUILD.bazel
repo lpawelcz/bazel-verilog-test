@@ -8,8 +8,9 @@ asic_flow_finish(
 	implemented_rtl = ":counter_place_and_route",
 	klayout_lyt = "klayout.lyt",
 	klayout_lef = "klayout_tech.lef",
-	platform_gds = "sky130_fd_sc_hd.gds",
 	fill_config = "fill.json",
+	additional_lef = ["sky130_fd_sc_hd_merged.lef"],
+	additional_gds = ["sky130_fd_sc_hd.gds"],
 )
 
 place_and_route(
