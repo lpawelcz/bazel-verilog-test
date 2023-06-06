@@ -1,9 +1,9 @@
 module counter(
   input wire clk,
   input wire reset,
-  output [127:0] out,
+  output [10:0] out,
 );
-  reg [127:0] counter_tmp;
+  reg [10:0] counter_tmp;
   always @ (posedge clk or posedge reset) begin
     if (reset) begin
       counter_tmp <= 0;
