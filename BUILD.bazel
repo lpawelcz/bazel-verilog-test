@@ -15,11 +15,11 @@ gds_write(
 
 place_and_route(
     name = "counter_place_and_route",
-    clock_period = "10",
-    core_padding_microns = 20,
-    die_height_microns = 200,
-    die_width_microns = 200,
-    placement_density = "0.7",
+    clock_period = "7",
+    core_padding_microns = 1,
+    die_height_microns = 110,
+    die_width_microns = 120,
+    placement_density = "1.00",
     synthesized_rtl = ":verilog_counter_synth",
 )
 
