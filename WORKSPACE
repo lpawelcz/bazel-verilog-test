@@ -17,8 +17,9 @@ register_toolchains("@rules_hdl//toolchains/cpython:cpython_toolchain")
 maybe(
     http_archive,
     name = "rules_python",
-    sha256 = "b6d46438523a3ec0f3cead544190ee13223a52f6a6765a29eae7b7cc24cc83a0",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/0.1.0/rules_python-0.1.0.tar.gz",
+    sha256 = "cdf6b84084aad8f10bf20b46b77cb48d83c319ebe6458a18e9d2cebf57807cdd",
+    strip_prefix = "rules_python-0.8.1",
+    url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.8.1.tar.gz",
 )
 
 
@@ -38,7 +39,7 @@ rules_hdl_dependency_support()
 
 
 load("@rules_hdl//:init.bzl", rules_hdl_init = "init")
-rules_hdl_init(python_interpreter_target = "@rules_hdl_cpython//:install/bin/python3")
+rules_hdl_init()
 
 http_archive(
     name = "com_grail_bazel_toolchain",
